@@ -69,7 +69,6 @@ class Icons8 {
         const formData = new FormData();
         formData.append("image", imageData, { filename: `image.${fileType.ext}`, contentType: fileType.mime });
         formData.append("enhance_faces", "true");
-        formData.append("watermark", "false");
         const response = await axios
             .post(this.create + `/${taskId}`, formData, {
                 headers: {
